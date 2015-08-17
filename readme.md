@@ -21,7 +21,7 @@ var frame = elegantSpinner();
 
 setInterval(function () {
 	logUpdate(frame());
-}, 100);
+}, 50);
 ```
 
 
