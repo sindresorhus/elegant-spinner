@@ -1,10 +1,19 @@
 'use strict';
 
-var frames = process.platform === 'win32' ?
-	['-', '\\', '|', '/'] :
-	['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
+var styles = {
+  win32: ['-', '\\', '|', '/'],
+  spinner: ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'],
+  bounce: ['⠁', '⠂', '⠄', '⠂']
+};
 
-module.exports = function () {
+module.exports = function (style) {
+  var frames = styles[
+    process.platform === 'win32'
+      ? 'win32'
+      : style
+        ? style
+        : 'spinner'
+  ];
 	var i = 0;
 
 	return function () {
@@ -12,4 +21,4 @@ module.exports = function () {
 	};
 };
 
-module.exports.frames = frames;
+module.exports.styles = styles;
