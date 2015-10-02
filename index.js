@@ -9,9 +9,9 @@ module.exports = function () {
 
 	return function () {
 		var frame = frames[i];
-		
+
 		i = (i + 1) % frames.length;
-		
+
 		return frame;
 	};
 };
