@@ -8,11 +8,7 @@ module.exports = function () {
 	var i = 0;
 
 	return function () {
-		var frame = frames[i];
-
-		i = (i + 1) % frames.length;
-
-		return frame;
+		return frames[i = ++i % frames.length];
 	};
 };
 
