@@ -1,15 +1,11 @@
-'use strict';
-var test = require('ava');
-var fn = require('./');
+import test from 'ava';
+import m from './';
 
-test(function (t) {
-	t.assert(Array.isArray(fn.frames));
-
-	var frame = fn();
-	t.assert(frame() !== frame());
-	t.assert(frame() !== frame());
-	t.assert(frame() !== frame());
-	t.assert(frame() !== frame());
-
-	t.end();
+test(t => {
+	t.true(Array.isArray(m.frames));
+	const frame = m();
+	t.not(frame(), frame());
+	t.not(frame(), frame());
+	t.not(frame(), frame());
+	t.not(frame(), frame());
 });
