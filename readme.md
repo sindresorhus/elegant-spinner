@@ -4,6 +4,8 @@
 
 <img width="173" src="screenshot.gif">
 
+**You probably want [`ora`](https://github.com/sindresorhus/ora) instead, which includes this spinner and handles the animation for you.**
+
 
 ## Install
 
