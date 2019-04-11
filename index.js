@@ -1,14 +1,15 @@
 'use strict';
 
-var frames = process.platform === 'win32' ?
+const frames = process.platform === 'win32' ?
 	['-', '\\', '|', '/'] :
 	['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
-module.exports = function () {
-	var i = 0;
+module.exports = () => {
+	let i = 0;
 
-	return function () {
-		return frames[i = ++i % frames.length];
+	return () => {
+		i = ++i % frames.length;
+		return frames[i];
 	};
 };
 
