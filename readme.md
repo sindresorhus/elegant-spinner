@@ -10,18 +10,18 @@
 ## Install
 
 ```
-$ npm install --save elegant-spinner
+$ npm install elegant-spinner
 ```
 
 
 ## Usage
 
 ```js
-var elegantSpinner = require('elegant-spinner');
-var logUpdate = require('log-update');
-var frame = elegantSpinner();
+const elegantSpinner = require('elegant-spinner');
+const logUpdate = require('log-update');
+const frame = elegantSpinner();
 
-setInterval(function () {
+setInterval(() => {
 	logUpdate(frame());
 }, 50);
 ```
@@ -34,4 +34,4 @@ setInterval(function () {
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

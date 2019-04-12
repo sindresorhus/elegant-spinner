@@ -1,9 +1,9 @@
 import test from 'ava';
-import m from './';
+import elegantSpinner from '.';
 
-test(t => {
-	t.true(Array.isArray(m.frames));
-	const frame = m();
+test('main', t => {
+	t.true(Array.isArray(elegantSpinner.frames));
+	const frame = elegantSpinner();
 	t.not(frame(), frame());
 	t.not(frame(), frame());
 	t.not(frame(), frame());
