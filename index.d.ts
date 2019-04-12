@@ -7,6 +7,7 @@ __You probably want [`ora`](https://github.com/sindresorhus/ora) instead, which 
 ```
 import elegantSpinner = require('elegant-spinner');
 import logUpdate = require('log-update');
+
 const frame = elegantSpinner();
 
 setInterval(() => {

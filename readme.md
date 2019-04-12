@@ -19,6 +19,7 @@ $ npm install elegant-spinner
 ```js
 const elegantSpinner = require('elegant-spinner');
 const logUpdate = require('log-update');
+
 const frame = elegantSpinner();
 
 setInterval(() => {
