@@ -1,6 +1,6 @@
 {
 	"name": "elegant-spinner",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Elegant spinner for interactive CLI apps",
 	"license": "MIT",
 	"repository": "sindresorhus/elegant-spinner",
