@@ -1,6 +1,6 @@
 'use strict';
 
-const frames = process.platform === 'win32' ?
+const frames = process.platform === 'win32' && !process.env.WT_SESSION ?
 	['-', '\\', '|', '/'] :
 	['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
