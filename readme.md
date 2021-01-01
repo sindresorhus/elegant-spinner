@@ -1,4 +1,4 @@
-# elegant-spinner [![Build Status](https://travis-ci.org/sindresorhus/elegant-spinner.svg?branch=master)](https://travis-ci.org/sindresorhus/elegant-spinner)
+# elegant-spinner
 
 > Elegant spinner for interactive CLI apps
 
