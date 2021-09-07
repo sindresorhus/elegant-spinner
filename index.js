@@ -1,16 +1,14 @@
-'use strict';
+import process from 'node:process';
 
-const frames = process.platform === 'win32' ?
-	['-', '\\', '|', '/'] :
-	['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
+export const spinnerFrames = process.platform === 'win32'
+	? ['-', '\\', '|', '/']
+	: ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'];
 
-module.exports = () => {
-	let i = 0;
+export default function elegantSpinner() {
+	let index = 0;
 
 	return () => {
-		i = ++i % frames.length;
-		return frames[i];
+		index = ++index % spinnerFrames.length;
+		return spinnerFrames[index];
 	};
-};
-
-module.exports.frames = frames;
+}

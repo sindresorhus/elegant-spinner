@@ -5,8 +5,8 @@ __You probably want [`ora`](https://github.com/sindresorhus/ora) instead, which 
 
 @example
 ```
-import elegantSpinner = require('elegant-spinner');
-import logUpdate = require('log-update');
+import elegantSpinner from 'elegant-spinner';
+import logUpdate from 'log-update';
 
 const frame = elegantSpinner();
 
@@ -15,10 +15,9 @@ setInterval(() => {
 }, 50);
 ```
 */
-declare const elegantSpinner: {
-	(): () => string;
+export default function elegantSpinner(): () => string;
 
-	frames: readonly string[];
-};
-
-export = elegantSpinner;
+/**
+All the frames of the spinner.
+*/
+export const spinnerFrames: readonly string[];
